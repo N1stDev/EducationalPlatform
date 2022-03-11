@@ -1,21 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <head>
     <head>
         <meta charset="UTF-8" lang="ru">
         <title>Educational site (demo)</title>
         <!-- Здесь надо добавить скрипт по замене изображения при клике "добавить в избранное"-->
-        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
     </head>
     <body scroll="yes">
         <div class="top_bar" id="forum_top_bar">
             <h1>Форум</h1>
         </div>
         <div class="question">
-            <img src="images/user_icon.png" class="question_avatar" height="25px" width="25px">
+            <img src="../../static/images/user_icon.png" class="question_avatar" height="25px" width="25px">
             <a class="question_author">Иванов Иван</a>
             <time datetime="10-03-2022T19:30">Сегодня, 19:30</time>
             <a href="#">
-                <img src="images/favorite.png" class="adding_to_favorites" height="20px" width="20px">
+                <img src="../../static/images/favorite.png" class="adding_to_favorites" height="20px" width="20px">
             </a>      
             <!-- Добавить желтый цвет при клике (onclick)-->                         
             <p class="question_text">В чём смысл жизни?</p>
@@ -23,11 +24,11 @@
             <p class="comments_bar">См. 2 ответа</p>
         </div>
         <div class="question">
-            <img src="images/user_icon.png" class="question_avatar" height="25px" width="25px">
+            <img src="../../static/images/user_icon.png" class="question_avatar" height="25px" width="25px">
             <a class="question_author">Петров Сергей</a>
             <time datetime="09-03-2022T15:00">Вчера, 15:00</time>
             <a href="#">
-                <img src="images/favorite.png" class="adding_to_favorites" height="20px" width="20px">
+                <img src="../../static/images/favorite.png" class="adding_to_favorites" height="20px" width="20px">
             </a>      
             <!-- Добавить желтый цвет при клике (onclick)-->                         
             <p class="question_text">Как найти производную от arctgx?</p>
