@@ -38,9 +38,10 @@ time {
     background-color: beige;
     border: 1px solid #595251;
     border-radius: 10px;
-    margin-left: 1200px;
-    margin-right: 50px;
+    margin: 50px;
+    margin-left: 85%;
     padding: 8px;
+    width: 150px;
 }
 
 .bottom {   /* Для форума */
