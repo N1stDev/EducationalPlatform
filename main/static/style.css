@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'SuperPuperFont';
-    src: url('../templates/main/fonts/OpenSans-Medium.ttf') format("truetype");
+    src: url('fonts/OpenSans-Medium.ttf') format("truetype");
     font-style: normal;
     font-weight: normal;
 }
