@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="ru">
+        <title>Educational site (demo)</title>
+        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <a href="{% url 'home' %}"> ← На главную </a>
+        <div class="top_bar" id="personal_top_bar"><h1>Личный кабинет</h1></div><br>
+        <div class="personal_button"><a href="#personal_info">Личная информация</a></div><br/>
+        <a href="#">
+            <aside class="personal_window" id="personal_info">
+                <!--Также необходимо показать аватар пользователя-->
+                <table>
+                    <tr>
+                        <td>Имя: </td>
+                        <td>Имя</td>
+                    </tr>
+                    <tr>
+                        <td>Фамилия: </td>
+                        <td>Фамилия</td>
+                    </tr>
+                    <tr>
+                        <td>Факультет: </td>
+                        <td>Название факультета</td>
+                    </tr>
+                    <tr>
+                        <td>Курс: </td>
+                        <td>Номер курса</td>
+                    </tr>
+                    <tr>
+                        <td>Персональные теги: </td>
+                        <td>Тег №1</td>
+                    </tr>
+                    <tr>
+                        <td>Эл. почта: </td>
+                        <td>Адрес эл. почты</td>
+                    </tr>
+                    <tr>
+                        <td>Ссылки на соц. сети: </td>
+                        <td>Ссылка</td> <!--Ссылки на убожеский вк, убожеский инстраграм, убожеский facebook и т.д..-->
+                    </tr>
+                </table>
+            </aside>
+        </a>
+        <a href="#">
+            <aside class="personal_window" id="settings">
+                <table>
+                    <tr>
+                        <td>Пароль: </td>
+                        <td>******</td>
+                    </tr>
+                    <tr>
+                        <td>Эл. почта: </td>
+                        <td>... <!--Строка с вводом адреса эл. почты, на котором заранее прописан текущий--></td>
+
+                    </tr>
+                    <tr> <!--Тут, я так понимаю, надо еще сделать страницу поддержки-->
+                        <td>Поддержка</td>
+                    </tr>
+                    <tr>
+                        <td>Настройки конфиденциальности</td>
+                    </tr>
+                    <!--Перечисление настроек (тут можно сделать, чтобы когда нажимаешь на треугольник, эти настройки выезжали)-->
+                    <tr>
+                        <td>Удалить аккаунт</td>
+                    </tr>
+                </table>
+            </aside>
+        </a>
+        <a href="#">
+            <aside class="personal_window" id="favorites">
+                <menu>
+                    <li>Избранные консультации</li>
+                    <li>Избранные файлы</li>
+                    <li>Избранные вопросы</li>
+                    <li>Избранные теги</li>
+                </menu>
+            </aside>
+        </a>
+        <a href="#">
+            <aside class="personal_window" id="history">
+                В стадии разработки...
+                <!--В блоках будут отображаться:
+                    Создание/удаление вопросов
+                    Ответы/удаление ответа на вопросы
+                    Загрузка/удаление файлов в архив
+                    Проведение консультации
+                    Доходы/расходы внутренней валюты
+                    Изменение пользовательских данных
+                -->
+            </aside>
+        </a>
+        </a href="#">
+            <aside class="personal_window" id="logout">
+                В стадии разработки...
+                <!--Тут будет нужный скрипт-->
+            </aside>
+        </a>
+        <div class="personal_button"><a href="#settings">Настройки</a></div><br/>
+        <div class="personal_button" ><a href="#favorites">Избранное</a></div><br/>
+        <div class="personal_button"><a href="#history">История</a></div><br/>
+        <div class="personal_button" id="log_out"><a href="#logout">Выйти</a></div><br/>
+
+    </body>
+</html>

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="ru">
+        <title>Educational site (demo)</title>
+        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="auth">
+            <table>
+                <tr>
+                    <td><a href="#blackout_login" id="top">Вход</a></td>
+                    <td><a href="#blackout_register" id="top">Регистрация</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="blackout_login">
+            <div class="pop_up" id="login_window">
+                <form>
+                    Логин: <input><br>
+                    Пароль: <input type="password">
+                    <a href="#" class="login_button" id="login">Войти</a> <!--
+                        Обмен данными с сервером; Панелька "top" меняется на никнейм.
+                        Также надо добавить сообщение о неверном пароле. -->
+                    <a href="#" class="login_button" id="close">Закрыть окно</a><br>
+                </form>
+            </div>
+        </div>
+        <div id="blackout_register">
+            <div class="pop_up" id="register_window">
+                <form>
+                    {% csrf_token %}
+                    Имя: {{ form.name }}<br>
+                    Фамилия: {{ form.surname }}<br>
+                    Логин: {{ form.login}}<br>
+                    Пароль: {{ form.password }}<br>
+
+                    <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+                     <!--
+                        Обмен данными с сервером; Добавление в БД пользователя исходя из введенных данных;
+                        Панелька "top" меняется на никнейм. Также стоит добавить сообщение о том, что такой пользователь есть. -->
+                    <a href="#" class="login_button" id="close">Закрыть окно</a><br>
+                </form>
+            </div>
+        </div>
+
+        <h1>Главная страница</h1><br><br>
+        <div class="button"><a href="{% url 'persar' %}">Личный кабинет</a></div><br/>
+        <div class="button"><a href="{% url 'archive' %}">Архив</a></div><br/>
+        <div class="button"><a href="{% url 'forum' %}">Форум</a></div><br/>
+        <div class="button"><a href="{% url 'consult' %}">Консультации</a></div><br/>
+    </body>
+</html>

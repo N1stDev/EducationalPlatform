@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <head>
+        <meta charset="UTF-8" lang="ru">
+        <title>Educational site (demo)</title>
+        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="top_bar" id="consultation_top_bar"><h1>Консультации</h1></div>
+        <div class="consultation">
+            <h2 class="consultation_name">Криволинейные интегралы</h2>
+            <img src="../../static/images/consultation_icon.png" class="consultation_image" height="150px" weight="150px">
+            <ul type="square">
+                <li>Автор: Архип Васильев</li>
+                <li>Дата проведения: 09.05.2021</li>
+                <li>Кол-во участников: 3</li>
+                <li>Теги: <span class="tag">#мат.анализ</span></li>
+                <li>Ссылки на внешние ресурсы</li>
+            </ul>
+            <!-- Автор, длительность, количество участников-->
+            <!-- Рейтинг консультации -->
+            <div class="rating">
+                <p>Рейтинг: 5.00</p>
+                <progress max="500" value="500">
+                    <span id="value">/span>
+                </progress>
+            </div>
+
+        </div>
+    </body>
+</head>

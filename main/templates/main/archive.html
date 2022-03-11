@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" lang="ru">
+        <title>Educational site (demo)</title>
+        <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <a href="{% url 'home' %}"> ← На главную</a>
+        <div class="top_bar" id="archive_top_bar">
+            <h1>Архив</h1>
+        </div>
+        <table id="file_list">
+            <tr>    <!-- Строка с обозначениями столбцов -->
+                <td>Тип</td>
+                <td>Название файла</td>         <!-- Тут же наверное и гиперссылка на скачивание или на просмотр на самом сайте-->
+                <td>Дата добавления</td>
+                <td>Размер файла</td>
+                <td>Автор</td>
+                <td>Теги</td>
+            </tr>
+            <tr>
+                <td><img src="../../static/images/image_icon.png" width="25px" height="25px"></td>
+                <td>theorem_koshi_1.jpg</td>
+                <td>19.02.2022</td>
+                <td>2 Мб</td>
+                <td>Олег Дверь</td>
+                <td>#диффуры</td>
+            </tr>
+            <tr>
+                <td><img src="../../static/images/document_icon.jpg" width="25px" height="25px"></td>
+                <td>english_grammar.docx</td>
+                <td>14.02.2022</td>
+                <td>5 Кб</td>
+                <td>Светлана Герасимова</td>
+                <td>#англ</td>
+            </tr>
+            <tr>
+                <td><img src="../../static/images/presentation_icon.jpg" width="25px" height="25px"></td>
+                <td>theorem_lection_1.pptx</td>
+                <td>21.02.2022</td>
+                <td>5 Мб</td>
+                <td>Тимофей Болонин</td>
+                <td>#твимс</td>
+            </tr>
+        </table>
+    </body>
