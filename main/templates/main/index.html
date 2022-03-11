@@ -7,12 +7,14 @@
         <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <table>
-            <tr>
-                <a href="#blackout_login" class="auth">Вход</button>
-                <a href="#blackout_register" class="auth">Регистрация</button>
-            </tr>
-        </table>
+        <div class="auth">
+            <table>
+                <tr>
+                    <td><a href="#blackout_login" id="top">Вход</a></td>
+                    <td><a href="#blackout_register" id="top">Регистрация</a></td>
+                </tr>
+            </table>
+        </div>
         <div id="blackout_login">
             <div class="pop_up" id="login_window">
                 <form>
