@@ -62,6 +62,6 @@ def delete_user_by_login(login):
     DELETE FROM users 
     WHERE 
     login = (?)
-    """, [login])
+    """, [login,])
     connection.commit()
 
