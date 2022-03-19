@@ -1,0 +1,14 @@
+import collections
+
+DISPLAY_RESOLUTION = [1280, 720]
+FPS = 120
+
+DRAWING_TOOLS = ['PEN', 'BRUSH', 'ERASER']
+
+TOOL_PARAMS = {
+    'PEN': {'WIDTH':2, 'COLOR':(0,0,100)},
+    'BRUSH': {'WIDTH':10, 'COLOR':(0,0,0)},
+    'ERASER': {'WIDTH':50, 'COLOR':(255,0,255)}
+}
+
+CURRENT_TOOL = 'PEN'
